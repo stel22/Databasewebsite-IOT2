@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(179, 214, 236);
+}
+
+header {
+  background-color: lightskyblue;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #000000;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.refresh-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center; /* center the contents of the h1 element */
+  margin-top: 7rem; /* Add some margin to separate h1 from header */
+  color: hsl(0, 0%, 100%); /* Change color to your desired color */
+}
+
+.table-header {
+  background-color: rgb(246, 218, 61);
+  color: #555;
+  font-weight: bold;
+  padding: 12px;
+}
+
+table {
+    border-spacing: 10px;
+    margin: 0 auto; /* horizontally center the table */
+    text-align: center; /* center the table contents */
+    border-collapse: collapse; /* merge the borders of the cells */
+    border: 1px solid black; /* set a solid black border for the table */
+  }
+  
+  td {
+    border: 1px solid black; /* set a solid black border for the table cells */
+  }
+  
+  tr:nth-child(even) td {
+    background-color: lightgray;
+  }
+
+  tr:nth-child(odd) td {
+    background-color: lightblue;
+  }
+ 
+  footer {
+    background-color: lightskyblue;
+    color: #000000;
+    text-align: Center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #000000;
+  }
+  
+  .logo {
+    flex-shrink: 0; /* prevent the logo from shrinking */
+  }
+  
+  .logo img {
+    height: 50px; /* adjust the height of the logo as needed */
+    width: auto; /* maintain the aspect ratio */
+    display: block; /* make sure the image is a block element */
+  }
+  .graph-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center; /* center containers horizontally */
+  }
+  
+  .graph-container {
+    padding: 3vw; /* reduce padding to make container smaller */
+    width: 80%; /* decrease width of container */
+    max-width: 600px; /* decrease maximum width of container */
+  }
+  
+  .graph-container img {
+    width: 100%; /* use a percentage value for image width */
+    height: auto;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .graph-container {
+      padding: 2.5vw; /* reduce padding for smaller screens */
+    }
+  }
+  
+
+footer {
+  height: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+

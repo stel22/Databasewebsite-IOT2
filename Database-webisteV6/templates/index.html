@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Indeklima Datamålinger</title>
+    <script type="text/javascript">
+        setTimeout(function() {
+          window.location.href = '/'; // Genindlæs siden
+        }, 300000); // Genindlæs siden efter 5 Min
+      </script>
+    
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+          <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}">
+          </div>
+          <nav>
+            <ul>
+              <li><button class="refresh-button" onclick="location.reload()">Refresh Data</button></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+            
+ <h1>Indeklima Datamålinger</h1>
+
+    <table>
+        <tr>
+            <th class="table-header">Tid</th>
+            <th class="table-header">Temperatur (*C)</th>
+            <th class="table-header">Fugtighed (%)</th>
+            <th class="table-header">CO2-niveau (PPM)</th>
+
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+    
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Graphs</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="graph-container-wrapper">
+            <div class="graph-container">
+                <img src="data:image/png;base64,{{ plot_data_temp }}" />
+            </div>
+            <div class="graph-container">
+                <img src="data:image/png;base64,{{ plot_data_hum }}" />
+            </div>
+            <div class="graph-container">
+                <img src="data:image/png;base64,{{ plot_data_co2 }}" />
+            </div>
+        </div>
+    </body>
+    </html>
+
+    
+    
+</body>
+
+<footer>
+  
+    <p>Copyright © 2023 Solsikkert-Indeklima</p>
+
+</footer>
+  
+
+</html>
